@@ -3,9 +3,9 @@ import os
 import socket
 import struct
 
-import thriftpy
-from thriftpy.protocol.binary import TBinaryProtocol
-from thriftpy.transport import TMemoryBuffer
+import thriftpy2 as thriftpy
+from thriftpy2.protocol.binary import TBinaryProtocol
+from thriftpy2.transport import TMemoryBuffer
 
 from zipkin_ot.util import unsigned_hex_to_signed_int
 

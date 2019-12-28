@@ -6,6 +6,8 @@ https://github.com/opentracing/basictracer-python
 See the API definition for comments.
 """
 
+from __future__ import print_function
+
 import atexit
 import ssl
 import sys
@@ -121,11 +123,11 @@ class Recorder(SpanRecorder):
 
     def _fine(self, fmt, args):
         if self.verbosity >= 1:
-            print "[Zipkin_OpenTracing Tracer]:", (fmt % args)
+            print("[Zipkin_OpenTracing Tracer]:", (fmt % args))
 
     def _finest(self, fmt, args):
         if self.verbosity >= 2:
-            print "[Zipkin_OpenTracing Tracer]:", (fmt % args)
+            print("[Zipkin_OpenTracing Tracer]:", (fmt % args))
 
     def record_span(self, span):
         """Per BasicSpan.record_span, safely add a span to the buffer.

@@ -2,11 +2,15 @@
 """
 import random
 import time
-import constants
+from . import constants
 import codecs
 import os
 import struct
 
+try:
+    unicode = str;
+except:
+    pass
 
 guid_rng = random.Random()   # Uses urandom seed
 
